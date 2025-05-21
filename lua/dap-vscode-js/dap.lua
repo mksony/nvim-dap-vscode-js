@@ -33,6 +33,7 @@ function M.attach_adapters(config)
 
 		-- Using the key for the dap.adapters table, but mapped value for the generation
 		dap.adapters[adapter] = js_adapter.generate_adapter(mapped_value, config)
+		dap.adapters[adapter].host = "127.0.0.1"
 	end
 end
 
